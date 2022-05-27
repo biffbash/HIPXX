@@ -7,10 +7,14 @@
 - Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
 
 # Summary
-[summary]: This HIP will improve the currently very limited custom antenna options when asserting a device, it will increase the PoC limit distance to 150km and provide support for legal pre-amps and repeaters, enabling many users to witness Lora signals more effectively.
+[summary]: This HIP will provide Fixed time interval PoC (3 times a day) and remove randomness to provide a more transparent and consistent PoC
+additonaly to also improve the currently very limited custom antenna options when asserting a device, it will increase the PoC limit distance to 150km and provide support for legal pre-amps and repeaters, enabling many users to witness Lora signals more effectively.
 
 # Motivation
-[motivation]: Helium network is sent via RF and your antenna setup should be as simple as a omni or as advanced as your are allowed in your region.
+[motivation]: Randomness should not be a factor in rewarding the coverage you provide since the coverage your providing is not random and should be consistent as well,
+this will enable transparency if your hotspot beacon fails at the designated time there should be a network failure report as to why and what stage it failed.
+
+Helium network is sent via RF and your antenna setup should be as simple as a omni or as advanced as your are allowed in your region.
 The current custom antenna selection leaves alot to be desired,  at the moment we only have one value for receive and gain together and a value for height.
 This HIP aims to tackle such issues as :
  
@@ -38,6 +42,13 @@ Additionally for those within range of a repeater the likelyhood that your radio
 # Detailed Explanation
 [detailed-explanation]: #detailed-explanation
 
+Removal of randomness in PoC, this will set beacons to 3 times a day(equivalent to PoC interval 480) at fixed 8 hour intervals this improvement will allow :-
+1) a user to be able to quickly see if the network or the hotspot is responsible for the failure of a beacon at their 8hr exact time, network performance will increase if users are able to quickly notice if their unit has not beaconed in the last 8 hours.
+2)The removal of the unnesscary randomness from PoC will provide a more fair and accurate and RELIABLE PoC process for all users.
+
+The hotspot when a connection is established to a validator should start the 8hr PoC timer with a verfication process to the validator, and on the validator a check on the blockchain to see if the unit  has beaconed within the last 8 hrs (to dissaude gaming). 
+
+
 The use of seperate antennas for receive and gain is not new, for anyone experienced in the RF field
  it is quite simple to split the receive and transmit signial from one SMA or N type connector.
 here is a video simply illustrating one of many ways how that is achieved, this one is using circulators.
@@ -63,8 +74,13 @@ Currently Repeaters can be used but only with a transmit delay on the same frequ
 This HIP proposes full support by changing a byte flag in the existing options field of the data packet when being rebroadcast by a repeater, to designate a repeated signal. this flag will make other repeaters ignore a packet that has already been repeated and stop a feedback loop (ensuring a signal is only repeated once).
 additionally in the case of repeating on a different channel than the original signal channel the abovementioned flag would be checked against the incorrect channel witness as rebroadcasting on a different channel allowed by your region would now be suitable.
 
-Addressing the distance limit.
-"Typical" lora sensors that have external antennas are more than capable of 100km. A more realistic figure is 150km for those with good line of sight elevation or are transmitting over water.
+PoC Distance increase
+"Typical" lora sensors that have external antennas are more than capable of 100km. A more realistic figure is 150km for those with good line of sight elevation or are transmitting over water"
+
+The founders of the lora standard, have successfully made a:
+"LoRaWAN® distance world record broken, twice. 766 km (476 miles) using 25mW transmission power"
+https://lora-alliance.org/lorawan-news/lorawanr-distance-world-record-broken-twice-766-km-476-miles-using-25mw-transmission/
+
 HIP58 only brought cherry picked statistical data to backup their limit of 100km unfortunately. Neither did we see any correspondence or info from any actual manufacturers of helium sensors whom this HIP affects directly.
 This HIP has reached out and contacted manufacturers such as "_company names yet to be disclosed_" and these are some statements from them:
 
@@ -138,7 +154,9 @@ We expect the interface  selection for the New custom antenna options to be simp
 # Deployment Impact
 [deployment-impact]: #deployment-impact
 
-current users can re-assert their antenna settings under custom antenna.
+The network performance with the obfuscating randomness removed will be alot more transparent to all users .
+
+Current users can re-assert their antenna settings under custom antenna.
 a firmware update with support for the new custom antenna fields may be required so devices can display their information correctly, and the handling of the data packets flagged with a repeater byte will have to be supported.
 Describe how this design will be deployed and any potential impact it may have on
 current users of this project.
