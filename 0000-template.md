@@ -91,7 +91,10 @@ Manufacturer statements.
 Manufacturer statements.
 Manufacturer statements.
 
-Techical reason for raising the PoC limit:
+# technical reasoning
+[technical-reasoning]: #technical-reasoning
+
+Technical reasoning for raising the PoC limit:
 
 quick preface:
 To put the power gains into scale for those who dont understand Decibels dB
