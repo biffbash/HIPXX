@@ -54,6 +54,7 @@ To support the use of seperate antennas , under custom antenna there will be two
 why these fields are required
 custom  antenna gain and receive : using seperate antennas (eg one 8db aerial for receive and a 3db aerial for TX) putting your one current DB value as 3 will result in legitimate beacons being invalid as the RSSI will be too high, conversely  putting 8db as your one value  may result in your radios power being limited on transmit on a 3db aerial.
 
+
 **Pre-amps & bi-directional amplifier support:**
 
 there are many widely known products out there such as flarm booster and a plethora of others on ebay and alibaba
@@ -71,6 +72,7 @@ Currently Repeaters can be used but only with a transmit delay on the same frequ
 This HIP proposes full support by changing a byte flag in the existing options field of the data packet when being rebroadcast by a repeater, to designate a repeated signal. this flag will make other repeaters ignore a packet that has already been repeated and stop a feedback loop (ensuring a signal is only repeated once).
 additionally in the case of repeating on a different channel than the original signal channel the abovementioned flag would be checked against the incorrect channel witness as rebroadcasting on a different channel allowed by your region would now be suitable.
 
+
 **PoC Distance increase** 
 
 "Typical" lora sensors that have external antennas are more than capable of 100km. A more realistic figure is 150km for those with good line of sight elevation or are transmitting over water"
@@ -80,6 +82,7 @@ The founders of the lora standard, have successfully made a:
 https://lora-alliance.org/lorawan-news/lorawanr-distance-world-record-broken-twice-766-km-476-miles-using-25mw-transmission/
 
 HIP58 only brought cherry picked statistical data to backup their limit of 100km unfortunately. Neither did we see any correspondence or info from any actual manufacturers of helium sensors whom this HIP affects directly.
+
 
 **Removal of randomness in PoC**
 
