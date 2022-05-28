@@ -44,15 +44,6 @@ Additionally for those within range of a repeater the likelyhood that your radio
 # Detailed Explanation
 [detailed-explanation]: #detailed-explanation
 
-Removal of randomness in PoC, this will set beacons to 3 times a day(equivalent to PoC interval 480) at fixed 8 hour intervals this improvement will allow :-
-
-A) a user to be able to quickly see if the network or the hotspot is responsible for the failure of a beacon at their 8hr exact time, network performance will increase if users are able to quickly notice if their unit has not beaconed in the last 8 hours.
-
-B)The removal of the unnessecary randomness from PoC will provide a more fair and accurate and RELIABLE PoC process for all users.
-
-The hotspot when a connection is established to a validator should start the 8hr PoC timer with a verfication process to the validator, and on the validator a check on the blockchain to see if the unit  has beaconed within the last 8 hrs (to dissaude gaming). 
-
-
 The use of seperate antennas for receive and gain is not new, for anyone experienced in the RF field
  it is quite simple to split the receive and transmit signial from one SMA or N type connector.
 here is a video simply illustrating one of many ways how that is achieved, this one is using circulators.
@@ -87,6 +78,15 @@ The founders of the lora standard, have successfully made a:
 https://lora-alliance.org/lorawan-news/lorawanr-distance-world-record-broken-twice-766-km-476-miles-using-25mw-transmission/
 
 HIP58 only brought cherry picked statistical data to backup their limit of 100km unfortunately. Neither did we see any correspondence or info from any actual manufacturers of helium sensors whom this HIP affects directly.
+
+**Removal of randomness in PoC**
+this will set beacons to 3 times a day(equivalent to PoC interval 480) at fixed 8 hour intervals this improvement will allow :-
+
+A) a user to be able to quickly see if the network or the hotspot is responsible for the failure of a beacon at their 8hr exact time, network performance will increase if users are able to quickly notice if their unit has not beaconed in the last 8 hours.
+
+B)The removal of the unnessecary randomness from PoC will provide a more fair and accurate and RELIABLE PoC process for all users.
+
+The hotspot when a connection is established to a validator should start the 8hr PoC timer with a verfication process to the validator, and on the validator a check on the blockchain to see if the unit  has beaconed within the last 8 hrs (to dissaude gaming). 
 
 # manufacturer statements
 [manufacturer-statements]: #manufacturer-statements
