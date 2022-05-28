@@ -85,12 +85,11 @@ The founders of the lora standard, have successfully made a:
 https://lora-alliance.org/lorawan-news/lorawanr-distance-world-record-broken-twice-766-km-476-miles-using-25mw-transmission/
 
 HIP58 only brought cherry picked statistical data to backup their limit of 100km unfortunately. Neither did we see any correspondence or info from any actual manufacturers of helium sensors whom this HIP affects directly.
-This HIP has reached out and contacted manufacturers such as "_company names yet to be disclosed_" and these are some statements from them:
 
-Manufacturer statements.
-Manufacturer statements.
-Manufacturer statements.
-Manufacturer statements.
+# manufacturer statements
+[manufacturer-statements]: #manufacturer-statements
+**Manufacturer statements.** to be added.
+This HIP has reached out and contacted manufacturers such as "_company names yet to be disclosed_" and these are some statements from them:
 
 # technical reasoning
 [technical-reasoning]: #technical-reasoning
