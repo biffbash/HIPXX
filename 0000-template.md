@@ -30,6 +30,8 @@ _NOTE HERE: NEITHER A) or B) can exceed EIRP legal TX limits in either case._
 4) Support for Repeaters - Extending the network coverage is one of the primary goals of building the helium network , we should be embracing anything that can legitimately extend our coverage, as a side benefit it will increase the chances hotspots of witnessing a beacon that was your hotspot missed due to channel hopping.
 The support for repeaters will include Extending the range in PoC limit to 150km as typical sensors with external aerials are capable of going over 100km. Also only for Repeated beacons a further increase to 200km from the orginal beaconer PoC only with a "repeated" flag added into the options field in the data packet to allow for the extra distance the repeater is capable of.
 
+5) Fixed beacon interval and removal of randomness. No longer will you have an arbitrary waiting period, hotspots will beacon at its allocated time , 3 times a day 8 hours apart with little to no deviation.
+
 
 # Stakeholders
 [stakeholders]: #stakeholders
@@ -44,7 +46,7 @@ Additionally for those within range of a repeater the likelyhood that your radio
 
 Removal of randomness in PoC, this will set beacons to 3 times a day(equivalent to PoC interval 480) at fixed 8 hour intervals this improvement will allow :-
 1) a user to be able to quickly see if the network or the hotspot is responsible for the failure of a beacon at their 8hr exact time, network performance will increase if users are able to quickly notice if their unit has not beaconed in the last 8 hours.
-2)The removal of the unnesscary randomness from PoC will provide a more fair and accurate and RELIABLE PoC process for all users.
+2)The removal of the unnessecary randomness from PoC will provide a more fair and accurate and RELIABLE PoC process for all users.
 
 The hotspot when a connection is established to a validator should start the 8hr PoC timer with a verfication process to the validator, and on the validator a check on the blockchain to see if the unit  has beaconed within the last 8 hrs (to dissaude gaming). 
 
