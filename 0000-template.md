@@ -80,10 +80,9 @@ https://lora-alliance.org/lorawan-news/lorawanr-distance-world-record-broken-twi
 HIP58 only brought cherry picked statistical data to backup their limit of 100km unfortunately. Neither did we see any correspondence or info from any actual manufacturers of helium sensors whom this HIP affects directly.
 
 **Removal of randomness in PoC**
+
 this will set beacons to 3 times a day(equivalent to PoC interval 480) at fixed 8 hour intervals this improvement will allow :-
-
 A) a user to be able to quickly see if the network or the hotspot is responsible for the failure of a beacon at their 8hr exact time, network performance will increase if users are able to quickly notice if their unit has not beaconed in the last 8 hours.
-
 B)The removal of the unnessecary randomness from PoC will provide a more fair and accurate and RELIABLE PoC process for all users.
 
 The hotspot when a connection is established to a validator should start the 8hr PoC timer with a verfication process to the validator, and on the validator a check on the blockchain to see if the unit  has beaconed within the last 8 hrs (to dissaude gaming). 
