@@ -76,7 +76,8 @@ Currently Repeaters can be used but only with a transmit delay on the same frequ
 This HIP proposes full support by changing a byte flag in the existing options field of the data packet when being rebroadcast by a repeater, to designate a repeated signal. this flag will make other repeaters ignore a packet that has already been repeated and stop a feedback loop (ensuring a signal is only repeated once).
 additionally in the case of repeating on a different channel than the original signal channel the abovementioned flag would be checked against the incorrect channel witness as rebroadcasting on a different channel allowed by your region would now be suitable.
 
-PoC Distance increase
+**PoC Distance increase** 
+
 "Typical" lora sensors that have external antennas are more than capable of 100km. A more realistic figure is 150km for those with good line of sight elevation or are transmitting over water"
 
 The founders of the lora standard, have successfully made a:
@@ -158,28 +159,21 @@ We expect the interface  selection for the New custom antenna options to be simp
 
 # Deployment Impact
 [deployment-impact]: #deployment-impact
-
-The network performance with the obfuscating randomness removed will be alot more transparent to all users .
+ With the obfuscating randomness removed the network performance will be alot more transparent to all users .
 
 Current users can re-assert their antenna settings under custom antenna.
 a firmware update with support for the new custom antenna fields may be required so devices can display their information correctly, and the handling of the data packets flagged with a repeater byte will have to be supported.
-Describe how this design will be deployed and any potential impact it may have on
-current users of this project.
-
-- How will current users be impacted?
-
-- How will existing documentation/knowlegebase need to be supported?
 
 - Is this backwards compatible?
 
         - If not, what is the procedure to migrate?
+        - Roll back to pre LHS.
 
 # Success Metrics
 [success-metrics]: #success-metrics
 
 legitimate users with over 100km range wont be adversely affected anymore, a WIN for the peoples network!
 
-as all of the changes listed above are optional changes to be made available to end users if they wish with the exception of the removal of the PoC 100km limit.
 - What should we measure to prove a performance increase?
 
 - What should we measure to prove an improvement in stability?
