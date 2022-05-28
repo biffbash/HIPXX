@@ -55,12 +55,14 @@ why these fields are required
 custom  antenna gain and receive : using seperate antennas (eg one 8db aerial for receive and a 3db aerial for TX) putting your one current DB value as 3 will result in legitimate beacons being invalid as the RSSI will be too high, conversely  putting 8db as your one value  may result in your radios power being limited on transmit on a 3db aerial.
 
 **Pre-amps & bi-directional amplifier support:**
+
 there are many widely known products out there such as flarm booster and a plethora of others on ebay and alibaba
 https://www.youtube.com/watch?v=JVWTKEUv5j0
 Support for these devices that improve our network coverage and reliability should be adopted as they are currently widely used.
 
 
 **Repeater support:**
+
 Putting in a repeater  when a terrain obstacle is in the way of RF is quite often a great solution, it means that you will be able to legitimately transmit & receive data to and from sensors on the on the other side of the obstacle.
 It also will extend the legitimate distance you can communicate with other hotspots and sensors.
 
