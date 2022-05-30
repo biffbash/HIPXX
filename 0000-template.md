@@ -81,7 +81,9 @@ The founders of the lora standard, have successfully made a:
 "LoRaWAN® distance world record broken, twice. 766 km (476 miles) using 25mW transmission power"
 https://lora-alliance.org/lorawan-news/lorawanr-distance-world-record-broken-twice-766-km-476-miles-using-25mw-transmission/
 
-HIP58 only brought cherry picked statistical data to backup their limit of 100km unfortunately. Neither did we see any correspondence or info from any actual manufacturers of helium sensors whom this HIP affects directly.
+HIP58 only brought cherry picked statistical data to backup their limit of 100km with no data on devices from their statistics in the sample whether they had external aerials and the strength of their transmit ability or the frequency they sampled on.
+
+100km is a distance which was created artificially by increasing the 50km limit * 2 so it was an arbitrary number, Neither did we see any correspondence or info from any actual manufacturers of helium sensors whom this HIP affects directly.
 
 
 **Removal of randomness in PoC**
